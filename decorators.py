@@ -5,9 +5,7 @@ def filter_first_key(filter_key):
                 {k: v for k, v in dict(args[0]).items()
                  if filter_key == '' or str(filter_key).lower() == str(k).lower()}, **kwargs
             )
-
         return wrapper
-
     return f
 
 
@@ -17,7 +15,6 @@ def time_result(func):
         f = func(*args, **kwargs)
         time_2 = time() - time_1
         return f, time_2
-
     return wrapper
 
 
